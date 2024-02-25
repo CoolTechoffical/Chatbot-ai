@@ -1,16 +1,15 @@
-import requests
+# bot.py
 
-# Replace these values with your actual API credentials
-api_id = "YOUR_API_ID"
-api_hash = "YOUR_API_HASH"
-bot_token = "YOUR_BOT_TOKEN"
+import json
+import requests
+from config import API_ID, API_HASH, BOT_TOKEN
 
 # Example API request using requests library
 url = "https://api.example.com/endpoint"
 headers = {
-    "API-ID": api_id,
-    "API-HASH": api_hash,
-    "Authorization": f"Bearer {bot_token}",
+    "API-ID": API_ID,
+    "API-HASH": API_HASH,
+    "Authorization": f"Bearer {BOT_TOKEN}",
 }
 
 # Make a sample API request
