@@ -1,7 +1,12 @@
 # bot.py
+import os
 import openai
 
-openai.api_key = "YOUR_API_KEY"  # Replace with your OpenAI API key
+# Load environment variables
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+api_hash = os.environ.get("API_HASH")
+api_id = os.environ.get("API_ID")
+bot_token = os.environ.get("BOT_TOKEN")
 
 def chat_with_gpt(prompt):
     response = openai.Completion.create(
