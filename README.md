@@ -12,7 +12,7 @@ This is a simple chatbot script using the OpenAI GPT-3.5 model.
    
 ## Environments
 
-API_HASH
-API_ID
-BOT TOKEN
-OPEN AI KEY
+1. API_HASH
+2. API_ID
+3. BOT TOKEN
+4. OPEN AI KEY
