@@ -1,6 +1,12 @@
 import json
-with open('app.json', 'r') as file:
-    app_data = json.load(file)
-bot_token = app_data['bot_token']  # Assuming 'bot_token' is a key in app.json
-
-# Use the bot token to initialize your bot
+app_data = {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": [1, 2, 3],  # You can store lists and other data structures
+}
+with open("app.json", "w") as file:
+    json.dump(app_data, file)
+with open("app.json", "r") as file:
+    loaded_data = json.load(file)
+    # Access data:
+    print(loaded_data["key1"])  # Output: value1
