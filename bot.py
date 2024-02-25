@@ -1,19 +1,32 @@
 # bot.py
+import openai
 
-import json
-import requests
-from config import API_ID, API_HASH, BOT_TOKEN
+openai.api_key = "YOUR_API_KEY"  # Replace with your OpenAI API key
 
-# Example API request using requests library
-url = "https://api.example.com/endpoint"
-headers = {
-    "API-ID": API_ID,
-    "API-HASH": API_HASH,
-    "Authorization": f"Bearer {BOT_TOKEN}",
-}
+def chat_with_gpt(prompt):
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=prompt,
+        temperature=0.7,
+        max_tokens=150,
+        n=1,
+    )
+    return response.choices[0].text.strip()
 
-# Make a sample API request
-response = requests.get(url, headers=headers)
+def main():
+    print("ChatGPT Bot: Hello! Type 'exit' to end the conversation.")
+    
+    while True:
+        user_input = input("You: ")
+        
+        if user_input.lower() == 'exit':
+            print("ChatGPT Bot: Goodbye!")
+            break
+        
+        prompt = f"You: {user_input}\nChatGPT Bot:"
+        bot_response = chat_with_gpt(prompt)
+        
+        print(f"ChatGPT Bot: {bot_response}")
 
-# Print the API response
-print(response.json())
+if __name__ == "__main__":
+    main()
