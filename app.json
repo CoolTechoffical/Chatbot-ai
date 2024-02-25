@@ -1,12 +1,24 @@
-import json
-app_data = {
-    "key1": "value1",
-    "key2": "value2",
-    "key3": [1, 2, 3],  # You can store lists and other data structures
+// app.json
+{
+  "name": "your-bot-app",
+  "description": "Your bot app description",
+  "repository": "https://github.com/Jeronmathew44/Chatbot-ai",
+  "env": {
+    "OPENAI_API_KEY": {
+      "description": "Your OpenAI API Key",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your API Hash",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Your API ID",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token",
+      "required": true
+    }
+  }
 }
-with open("app.json", "w") as file:
-    json.dump(app_data, file)
-with open("app.json", "r") as file:
-    loaded_data = json.load(file)
-    # Access data:
-    print(loaded_data["key1"])  # Output: value1
