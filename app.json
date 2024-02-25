@@ -1,5 +1,11 @@
 {
-  "api_id": "YOUR_API_ID",
-  "api_hash": "YOUR_API_HASH",
-  "bot_token": "YOUR_BOT_TOKEN"
+  "name": "your-app-name",
+  "description": "Your app description",
+  "repository": "https://github.com/your-username/your-repo",
+  "env": {
+    "OPENAI_API_KEY": {
+      "description": "Your OpenAI API Key",
+      "required": true
+    }
+  }
 }
