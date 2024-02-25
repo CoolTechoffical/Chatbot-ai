@@ -9,3 +9,10 @@ This is a simple chatbot script using the OpenAI GPT-3.5 model.
    ```bash
    pip install -r requirements.txt
    python bot.py
+   
+## Environments
+
+API_HASH
+API_ID
+BOT TOKEN
+OPEN AI KEY
