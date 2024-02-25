@@ -1,11 +1,6 @@
-{
-  "name": "your-app-name",
-  "description": "Your app description",
-  "repository": "https://github.com/your-username/your-repo",
-  "env": {
-    "OPENAI_API_KEY": {
-      "description": "Your OpenAI API Key",
-      "required": true
-    }
-  }
-}
+import json
+with open('app.json', 'r') as file:
+    app_data = json.load(file)
+bot_token = app_data['bot_token']  # Assuming 'bot_token' is a key in app.json
+
+# Use the bot token to initialize your bot
