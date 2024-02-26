@@ -1,0 +1,14 @@
+{
+  "name": "TelegramBot",
+  "version": "0.1",
+  "description": "A Telegram Bot",
+  "main": "bot.py",
+  "scripts": {
+    "start": "python3 bot.py"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "telethon": "1.23.0"
+  }
+}
