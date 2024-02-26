@@ -1,0 +1,2 @@
+# requirements.txt
+telethon==1.23.0  # Replace with the appropriate version
